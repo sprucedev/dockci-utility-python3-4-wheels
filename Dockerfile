@@ -1,10 +1,7 @@
-FROM debian:jessie
+FROM alpine:3.2
 
-ENV DEBIAN_FRONTEND noninteractive
-
-RUN apt-get update && apt-get install -y \
-         python3 python3-pip
-RUN pip3 install -U pip==7.1.0
+RUN apk add --update ca-certificates python3=3.4.3-r2 && rm -rf /var/cache/apk/*
+RUN easy_install-3.4 pip==7.1.0
 
 RUN adduser --disabled-password --home /work work
 USER work
