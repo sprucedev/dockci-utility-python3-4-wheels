@@ -4,14 +4,14 @@ DockCI premade utility to build wheels for Python 3.4
 ## Usage
 - Add a utility project into DockCI
     - Use this git repository as the repo
-    - Set the slug to something like `python3-4-wheels`
-    - Set the name to something like `Python 3.4 Wheels`
+    - Set the slug to something like `python3-4-wheels-alpine`
+    - Set the name to something like `Python 3.4 Wheels Alpine`
 - Manually create a build
     - Use the lastest version as the git reference
 - Modify your `dockci.yaml`:
 ```
 utilities:
-  - name: python3-4-wheels
+  - name: python3-4-wheels-alpine
     input:
       - requirements.txt /work/requirements.txt
       - test-requirements.txt /work/test-requirements.txt
